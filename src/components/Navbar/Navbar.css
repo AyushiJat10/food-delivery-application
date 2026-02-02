@@ -7,12 +7,15 @@
 .navbar .logo{
     width:150px;
 }
-.navbar-menu{
-    display: flex;
-    list-style: none;
+.navbar-menu{ 
     gap: 20px;
+    display: flex;
+   list-style: none;
     color:#49557e;
-    font-size: 18px;
+    font-size: 30px;
+}
+.navbar-menu li{
+    color: red;
 }
 .navbar-right{
     display: flex;
