@@ -14,9 +14,7 @@
     color:#49557e;
     font-size: 30px;
 }
-.navbar-menu li{
-    color: red;
-}
+
 .navbar-right{
     display: flex;
     align-items: center;
