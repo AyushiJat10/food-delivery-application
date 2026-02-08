@@ -12,14 +12,26 @@ const app = express()
 const port = process.env.PORT || 4000;
 
  
-//middleware
+// List of allowed origins
+const allowedOrigins = [
+  "https://food-delivery-application-eight-alpha.vercel.app", // user frontend
+  "https://food-delivery-application-71o5.vercel.app" // admin frontend
+]
+
+// Middleware
 app.use(express.json())
 
 app.use(cors({
-  origin:[ "https://food-delivery-application-eight-alpha.vercel.app/",
-  "https://food-delivery-application-71o5.vercel.app/"],
+  origin: function(origin, callback){
+    // allow requests with no origin (like Postman)
+    if(!origin || allowedOrigins.includes(origin)){
+      callback(null, true)
+    } else {
+      callback(new Error("CORS not allowed"))
+    }
+  },
   credentials: true
-}));
+}))
 
 
 //db connection
