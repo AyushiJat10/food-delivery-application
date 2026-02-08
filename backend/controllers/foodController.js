@@ -1,4 +1,4 @@
-import { data } from "react-router-dom";
+
 import foodModel from "../models/foodModel.js";
 import fs from 'fs'
 
