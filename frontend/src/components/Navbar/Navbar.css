@@ -5,14 +5,55 @@
     align-items: center;
 }
 .navbar .logo{
-    width:150px;
+    width:330px;
+    padding: 0;
 }
 .navbar-menu{ 
     gap: 20px;
     display: flex;
    list-style: none;
     color:#49557e;
-    font-size: 30px;
+    font-size: 15px;
+}
+
+.navbar-menu a{
+    position: relative;
+    text-decoration: none;
+    color: #49557e;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu a:hover{
+    color: tomato;
+    transform: scale(1.05);
+}
+
+/* bottom underline (left → right) */
+.navbar-menu a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 1.8px;
+    background: tomato;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+/* active state */
+.navbar-menu a.active{
+    color: tomato;
+}
+
+/* animate lines when active */
+.navbar-menu a.active::after{
+    width: 100%;
+}
+
+.navbar-menu a.active::before{
+    width: 100%;
 }
 
 .navbar-right{
@@ -24,19 +65,22 @@
     background-color: transparent;
     font-size: 16px;
     color: #49557e;
-    border:1px solid tomato ;
+    border: 1px solid tomato;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: all 0.3s ease;
 }
+
 .navbar button:hover{
-    background-color:#fff4f2 ;
+    background-color: tomato;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,99,71,0.9);
+    transform: scale(1.05);
 }
-.navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
-}
+
+
 .navbar-search-icon{
     position: relative;
 
@@ -50,10 +94,13 @@
     top: -8px;
     right: -8px;
 }
-@media (max-width:1050px){
+@media (max-width:1070px){
     .navbar .logo{
-        width: 140px;
+        width: 230px;
     }
+    .navbar-menu a{
+   font-size: 19px;
+}
 }
 .navbar-menu{
     gap: 20px;
@@ -101,9 +148,17 @@
 .navbar-profile-dropdown li:hover{
     color: tomato;
 }
-@media (max-width:900px){
+@media (max-width:930px){
     .navbar .logo{
-        width: 120px;
+        width: 170px;
+    }
+    .navbar-menu a{
+   font-size: 18px;
+}
+}
+@media (max-width:780px){
+    .navbar .logo{
+        width: 310px;
     }
 }
 .navbar-menu{
@@ -120,10 +175,12 @@
     padding: 6px 19px;
     font-size: 15px;
 }
-
-@media (max-width:750px){
-    
-
+@media (max-width:850px){
+.navbar-menu a{
+   font-size: 15px;
+}
+}
+@media (max-width:780px){
 .navbar-menu{
    display: none;
 }

@@ -2,9 +2,15 @@
     height: 34vw;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
-    background-size: contain;
+    background-size: cover;
     position: relative;
-    
+     transition: 0.4s ease;
+     border-radius: 25px;
+}
+.header:hover{
+    transform: scale(1.009);
+    box-shadow: 0 10px 20px rgba(103, 30, 1, 0.4);
+    border: 0.6px solid rgb(195, 54, 3);
 }
 .header-contents{
     position: absolute;
@@ -39,7 +45,14 @@
     border: 1px solid rgb(126, 117, 106);
 }
 .header-contents button:hover{
-    background-color: #b6b5b4;
+    background-color: #224e30;
+    color: white;
+
+    /* ✨ TEXT GLOW */
+    text-shadow: 
+      0 0 5px #ffffff,
+      0 0 10px #ffffff,
+      0 0 20px #4cff9a;
 }
 @media (max-width:1050px){
     

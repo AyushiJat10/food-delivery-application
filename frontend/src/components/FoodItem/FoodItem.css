@@ -8,7 +8,7 @@
 }
 .food-item-image{
  width: 100%;
- border-radius: 15px;
+ border-radius: 15px 15px 0 0;
 }
 .food-item-info{
     padding: 20px;
@@ -61,4 +61,13 @@
 }
 .food-item-counter img{
     width: 25px;
+}
+.food-item{
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.food-item:hover{
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 17px rgba(224, 56, 27, 0.6);
+    border: 0.5px solid rgb(196, 32, 3) ;
 }
