@@ -14,7 +14,13 @@ const port = process.env.PORT || 4000;
  
 //middleware
 app.use(express.json())
-app.use(cors())
+import cors from "cors";
+
+app.use(cors({
+  origin: "https://food-delivery-application-eight-alpha.vercel.app/",
+  credentials: true
+}));
+
 
 //db connection
 ConnectDB();
