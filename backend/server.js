@@ -17,7 +17,8 @@ app.use(express.json())
 import cors from "cors";
 
 app.use(cors({
-  origin: "https://food-delivery-application-eight-alpha.vercel.app/",
+  origin:[ "https://food-delivery-application-eight-alpha.vercel.app/",
+  "https://food-delivery-application-71o5.vercel.app/"],
   credentials: true
 }));
 
